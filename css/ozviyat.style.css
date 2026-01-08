@@ -1,0 +1,83 @@
+.membership-card {
+  background: linear-gradient(135deg, #d32f2f, #000);
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  font-family: sans-serif;
+}
+
+.membership-card h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.membership-card p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.membership-card input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* دکمه بزرگ و افکت آب */
+.btn-liquid {
+  position: relative;
+  display: block;
+  width: 80%; /* دکمه بزرگتر */
+  max-width: 400px;
+  margin: 20px auto 0 auto;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d32f2f 30%, #ff3d3d 70%);
+}
+
+.btn-liquid::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: liquidMove 3s linear infinite;
+}
+
+@keyframes liquidMove {
+  0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+  50% { transform: translateX(50%) translateY(50%) rotate(180deg); }
+  100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
+}
+
+/* ریسپانسیو */
+@media screen and (max-width: 768px) {
+  .membership-card input, .btn-liquid { width: 90%; }
+  .membership-card h3 { font-size: 26px; }
+  .membership-card p { font-size: 14px; }
+}
+
+@media screen and (max-width: 480px) {
+  .membership-card h3 { font-size: 22px; }
+  .membership-card p { font-size: 13px; }
+  .btn-liquid { font-size: 16px; padding: 12px; }
+}

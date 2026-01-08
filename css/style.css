@@ -1,0 +1,391 @@
+    /* ===== پایه ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    background: #f7f7f7;
+    scroll-behavior: smooth;
+}
+
+/* ===== هدر ===== */
+.header {
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.login a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.login a:hover {
+  color: #cf1e1e;
+}
+
+.login i {
+  font-size: 18px; /* اندازه آیکون */
+}
+.login a {
+  display: inline-flex;
+  align-items: center; /* آیکون و متن وسط چین شوند */
+  gap: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+  vertical-align: middle; /* کمک می‌کند آیکون وسط متن باشد */
+}
+
+.login i {
+  font-size: 18px;
+  line-height: 1; /* آیکون روی خط متن قرار گیرد */
+}
+
+.header span.baner {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.header span.baner span {
+    color: #cf1e1e;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.header ul a {
+    text-decoration: none;
+}
+.list, .list1 {
+    font-size: 18px;
+    color: black;
+    padding: 6px 8px;
+    transition: all 0.3s;
+}
+.list:hover, .list1:hover {
+    transform: translateY(-3px);
+    color: #cf1e1e;
+    text-shadow: 0 0 5px black;
+}
+
+.serch {
+    border: 0;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    padding: 6px;
+    text-align: center;
+    transition: all 0.3s;
+    background-color: lightgray;
+}
+.serch:hover {
+    box-shadow: 0 0 10px black;
+    border: 1px solid red;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.khat { color: black; }
+
+/* ===== تصویر اصلی ===== */
+.image {
+    height: 700px;
+    background-image: url(../image/Lucid_Origin_crie_uma_imagem_de_um_roteador_de_internet_com_4__0.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+.image h1 {
+    font-size: 80px;
+    color: #000;
+    text-shadow: 0 0 20px white;
+}
+.image h1 span { color: red; }
+
+/* ===== فروش ویژه ===== */
+.special-sale-section { margin: 30px; }
+.special-sale {
+    background: linear-gradient(135deg, #d32f2f, #000);
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+}
+.special-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.special-products {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.special-products::-webkit-scrollbar { height: 6px; }
+.special-products::-webkit-scrollbar-thumb { background: #fff; border-radius: 6px; }
+.special-card {
+    background: #fff;
+    color: #000;
+    width: 200px;
+    border-radius: 14px;
+    padding: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+    position: relative;
+}
+.special-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #eee;
+}
+.special-card h4 { font-size: 14px; margin: 10px 0; height: 36px; overflow: hidden; }
+.special-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #d32f2f;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 8px;
+}
+.special-price .new { color: #d32f2f; font-weight: bold; }
+.special-price .old { font-size: 12px; color: #888; text-decoration: line-through; }
+/* ================= تبلیغات ================= */
+
+.ads-section {
+  margin: 30px;
+}
+
+.ads-section h3 {
+  margin-bottom: 15px;
+  border-right: 6px solid #d32f2f;
+  padding-right: 10px;
+}
+
+.ads-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.ads-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.ads-slider::-webkit-scrollbar-thumb {
+  background: #d32f2f;
+  border-radius: 10px;
+}
+
+.ad-card {
+  flex-shrink: 0;
+  width: 420px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 2px solid #000;
+}
+
+.ad-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== محصولات ساعت، لپتاپ، هدفون ===== */
+.watch-section {
+    margin: 30px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+}
+.watch-section h2 {
+    margin: 0 0 20px;
+    padding-right: 12px;
+    border-right: 6px solid #d32f2f;
+    font-size: 22px;
+}
+.watch-products {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.watch-products::-webkit-scrollbar { height: 6px; }
+.watch-products::-webkit-scrollbar-thumb { background: #000; border-radius: 6px; }
+.watch-card {
+    width: 220px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 18px;
+    padding: 12px;
+    text-decoration: none;
+    color: #000;
+    flex-shrink: 0;
+    transition: 0.3s;
+    position: relative;
+}
+.watch-card:hover {
+    transform: translateY(-6px);
+    border-color: #d32f2f;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.watch-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+.watch-card h4 { font-size: 15px; margin: 10px 0; height: 40px; overflow: hidden; }
+.watch-price {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.watch-card::after {
+    content: "پیشنهادی";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #d32f2f;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 30px 20px 15px;
+  font-family: sans-serif;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: #d32f2f;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-about, .footer-links, .footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-about h4,
+.footer-links h4,
+.footer-social h4 {
+  margin-bottom: 10px;
+  color: #d32f2f;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li { margin-bottom: 6px; }
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.3s;
+}
+.social-icons a:hover { color: #d32f2f; }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+/* ===== ریسپانسیو ===== */
+@media screen and (max-width: 768px) {
+  .footer-top { flex-direction: column; align-items: flex-start; }
+  .social-icons a { margin-right: 5px; margin-bottom: 5px; }
+}
+
+@media screen and (max-width: 480px) {
+  .footer { padding: 20px 10px 10px; }
+  .footer-about h4,
+  .footer-links h4,
+  .footer-social h4 { font-size: 16px; }
+  .footer-bottom { font-size: 12px; }
+}
+
+/* ===== ریسپانسیو ===== */
+@media screen and (max-width: 992px) {
+    .header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 10px; }
+    .header ul { gap: 10px; flex-wrap: wrap; }
+    .serch { width: 100%; margin-top: 5px; }
+    .login { width: 100%; justify-content: flex-start; }
+    .image { height: 500px; padding: 60px 20px; }
+    .image h1 { font-size: 60px; }
+    .special-card { width: 160px; }
+    .watch-card { width: 180px; }
+    .watch-card h4 { font-size: 14px; }
+    .watch-price { font-size: 14px; padding: 6px; }
+}
+
+@media screen and (max-width: 576px) {
+    .header { padding: 8px; }
+    .header span.baner { font-size: 20px; }
+    .list, .list1 { font-size: 14px; padding: 4px 6px; }
+    .serch { width: 95%; }
+    .image { height: 350px; padding: 40px 10px; }
+    .image h1 { font-size: 36px; }
+    .special-card { width: 140px; padding: 8px; }
+    .special-card h4 { font-size: 12px; height: auto; }
+    .special-price .new, .special-price .old { font-size: 12px; }
+    .watch-card { width: 140px; padding: 8px; }
+    .watch-card h4 { font-size: 12px; height: auto; }
+    .watch-price { font-size: 12px; padding: 4px; }
+    .watch-section h2 { font-size: 18px; padding-right: 8px; border-right: 4px solid #d32f2f; }
+}
