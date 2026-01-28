@@ -1,0 +1,156 @@
+    /* ===== پایه ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f7f7;
+    scroll-behavior: smooth;
+}
+
+/* ===== هدر ===== */
+.header {
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.login a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.login a:hover {
+  color: #cf1e1e;
+}
+
+.login i {
+  font-size: 18px; /* اندازه آیکون */
+}
+.login a {
+  display: inline-flex;
+  align-items: center; /* آیکون و متن وسط چین شوند */
+  gap: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 95%;
+  transition: all 0.3s;
+  vertical-align: middle; /* کمک می‌کند آیکون وسط متن باشد */
+}
+
+.login i {
+  font-size: 95%;
+  line-height: 1; /* آیکون روی خط متن قرار گیرد */
+}
+
+.header span.baner {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.header span.baner span {
+    color: #cf1e1e;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.header ul a {
+    text-decoration: none;
+}
+.list, .list1 {
+    font-size: 95%;
+    color: black;
+    padding: 6px 8px;
+    transition: all 0.3s;
+}
+.list:hover, .list1:hover {
+    transform: translateY(-3px);
+    color: #cf1e1e;
+    text-shadow: 0 0 5px black;
+}
+
+.serch {
+    border: 0;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    padding: 6px;
+    text-align: center;
+    transition: all 0.3s;
+    background-color: lightgray;
+}
+.serch:hover {
+    box-shadow: 0 0 10px black;
+    border: 1px solid red;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.khat { color: black; }
+.content{
+    width: 100%;
+}
+.card-content{
+    margin: 5px;
+}
+.card-content a{
+    width: 186px;
+    height: 286px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.card-content a:hover{
+    transform: scale(1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px black;
+    border: 1px solid darkgray;
+    border-radius: 3px;
+}
+.card-content img{
+     width: 100%;
+    height: 60%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: #eee;
+    border-bottom:1px solid lightgray;
+}
+.card-content p{
+    color: rgb(59, 57, 57);
+    margin: 5px;
+}
+.card-content B{
+    color: #000;
+    margin-right: 50px;
+}
+@media screen and (min-width:0px) and (max-width:767px) {
+.card-content a{width: 49%;}
+}

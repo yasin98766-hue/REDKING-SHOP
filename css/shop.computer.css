@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
   background: #f9f9f9;
@@ -49,7 +49,7 @@ body{
   text-decoration: none;
 }
 .list{
-  font-size: 18px;
+  font-size: 95%;
   color: black;
   transition: all 0.3s;
 }
@@ -82,7 +82,7 @@ body{
 .login a{
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 95%;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -212,7 +212,10 @@ body{
   .btn-liquid{ width: 80%; }
   .serch{ width: 80%; margin: 10px 0; }
 }
+@media screen and (min-width:0px) and (max-width:767px) {
 
+  
+}
 /* ===== ریسپانسیو هدر هوایی ===== */
 @media screen and (max-width: 768px){
   .header{

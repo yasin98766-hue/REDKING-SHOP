@@ -5,9 +5,15 @@
     padding: 0;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f7f7f7;
     scroll-behavior: smooth;
+}
+.tab{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* ===== هدر ===== */
@@ -48,13 +54,13 @@ body {
   gap: 5px;
   color: black;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 95%;
   transition: all 0.3s;
   vertical-align: middle; /* کمک می‌کند آیکون وسط متن باشد */
 }
 
 .login i {
-  font-size: 18px;
+  font-size: 95%;
   line-height: 1; /* آیکون روی خط متن قرار گیرد */
 }
 
@@ -81,7 +87,7 @@ body {
     text-decoration: none;
 }
 .list, .list1 {
-    font-size: 18px;
+    font-size: 95%;
     color: black;
     padding: 6px 8px;
     transition: all 0.3s;
@@ -91,7 +97,6 @@ body {
     color: #cf1e1e;
     text-shadow: 0 0 5px black;
 }
-
 .serch {
     border: 0;
     border-radius: 10px;
@@ -213,7 +218,6 @@ body {
   border-radius: 20px;
   overflow: hidden;
   scroll-snap-align: start;
-  border: 2px solid #000;
 }
 
 .ad-card img {
@@ -226,15 +230,32 @@ body {
 .watch-section {
     margin: 30px;
     background: #fff;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 20px;
     padding: 20px;
+    position: relative;
 }
 .watch-section h2 {
     margin: 0 0 20px;
     padding-right: 12px;
     border-right: 6px solid #d32f2f;
     font-size: 22px;
+    display: inline-block;
+}
+.link-mahsoll{
+     margin: 0 0 20px;
+    padding-right: 12px;
+    font-size: 18px;
+    position: absolute;
+    left:30px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    transition: all 2s;
+}
+.link-mahsoll:hover{
+  transform: translateY(-2px);
+  color: red;
 }
 .watch-products {
     display: flex;
@@ -247,7 +268,7 @@ body {
 .watch-card {
     width: 220px;
     background: #fff;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 18px;
     padding: 12px;
     text-decoration: none;
@@ -256,10 +277,45 @@ body {
     transition: 0.3s;
     position: relative;
 }
+.watch-cardp {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 12px;
+    text-decoration: none;
+    color: #000;
+    flex-shrink: 0;
+    transition: 0.3s;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.watch-cardp::after {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #d32f2f;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color: red;
+}
+.fa.fa-external-link{
+  transform: rotate(-135deg);
+}
+.watch-cardp:hover {
+    transform: translateY(-6px);
+        border-color: #d32f2f;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 .watch-card:hover {
     transform: translateY(-6px);
     border-color: #d32f2f;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 0 25px black;
 }
 .watch-card img {
     width: 100%;
@@ -294,6 +350,7 @@ body {
   color: #fff;
   padding: 30px 20px 15px;
   font-family: sans-serif;
+  text-align: center;
 }
 
 .footer a {
@@ -344,6 +401,101 @@ body {
   border-top: 1px solid #444;
   padding-top: 10px;
   font-size: 14px;
+}
+/* tagfif */
+.chatbot {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 999;
+}
+
+#chat-toggle {
+  display: none;
+}
+
+.chat-icon {
+  background: linear-gradient(135deg, #d32f2f, #000);
+  color: white;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat-box {
+  width: 300px;
+  background: linear-gradient(135deg, #d32f2f, #000);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+}
+
+#chat-toggle:checked + .chat-icon + .chat-box {
+  display: block;
+}
+
+.chat-header {
+  background:linear-gradient(135deg, #d32f2f, #000) ;
+  color: white;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header label {
+  cursor: pointer;
+}
+
+.chat-content {
+  padding: 10px;
+}
+
+.bot-msg {
+  color: white;
+  background: #000000;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.option {
+  display: block;
+  background: #ffffff;
+  color: black;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.answer {
+  display: none;
+}
+.tab-footer{
+  width: 8%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5px;
+ justify-content: space-between;
+}
+#q1:checked ~ .a1,
+#q2:checked ~ .a2,
+#q3:checked ~ .a3 {
+  display: block;
 }
 
 /* ===== ریسپانسیو ===== */

@@ -1,3 +1,11 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .login-card {
   background: linear-gradient(135deg, #000, #d32f2f);
   color: #fff;
@@ -32,6 +40,10 @@
   outline: none;
   font-size: 14px;
 }
+form a{
+  text-decoration: none;
+  color: white;
+}
 
 /* دکمه ورود با افکت آب */
 .login-card .btn-liquid {
@@ -40,6 +52,7 @@
   width: 80%;
   max-width: 400px;
   margin: 20px auto 0 auto;
+  margin-bottom: 15px;
   padding: 15px;
   color: #fff;
   font-size: 20px;
